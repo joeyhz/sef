@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+<link rel="stylesheet" type="text/css" href="sephar.css">
+<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+<body>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<!--script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script-->
+<h1><b>Jew and A</b></h1>
+<div id = clicker></div>
+
+<div class = mainBox id = mainBox>
+    <div class = topMenu id = topMenu>
+        <div class = philM id = philM>
+            <p>Philosophy</p>
+        </div>
+        <div class = issuesM id = issuesM>
+            <p>Contemporary Issues</p>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class = moralM id = moralM>
+            <p>Morality</p>
+        </div>
+        <div class = lawM id = lawM>
+            <p>Jewish Law</p>
+        </div>
+
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("topMenu");
+            if (x.className === "topMenu") {
+                x.className += " responsive";
+            } else {
+                x.className = "topMenu";
+            }
+        }
+    </script>
+
+    <hr>
+    <div class = qSelected id = qSelected>What is the Jewish way of arguing?</div>
+    <input type="text" id="myInput" onkeyup="filt()" placeholder="Search Questions by Keyword">
+    <div class =aPlace id = aPlace>
+        <button class = addA id = addA>New Answer</button>
+            <div class = newABox>
+                <div style = "margin-bottom:5px;"><b>Citation</b></div>
+                <label for = text>Book: </label>
+                <input type="text" id = text class = citInput placeholder="eg. Pirkei Avot, genesis">
+                <div>
+                    <label for = sub>Section: </label>
+                    <input type="text" id = sub class = num placeholder="eg. 1, 2b">
+                    <label for = subSub>Subsection: </label>
+                    <input type="text" id = subSub class = num placeholder="eg. 1,3-4">
+                </div>
+                <span>
+                    <button class = 'addA lowMarg' id = jax>Find Source</button>
+                    <i>Powered by Sefaria</i>
+                </span>
+                <div id = quoteSpace>
+                    <div id = disclaimer>To assure authentic citations, the only action allowed by this text area is to delete highlighted selections.</div>
+                    <textarea class = quoteArea rows = 10 id = quoteArea></textarea>
+                </div>
+                <div style = "margin-bottom:5px;"><b>Description</b></div>
+                    <textarea class = descInput rows = 10 id = desc placeholder="A brief explanation of how your source answers the question."></textarea>
+                <button class = exit id = exit>Exit</button>
+                <button class = done id = done>Done</button>
+            </div>
+        <div id = belowButton></div>
+    </div>
+    <div><input type="text" class = "qAdd" id="qAdder" placeholder='Hit Enter to submit your question'></div>
+    <button id = addQ class = addQ>New Philosophy Question</button>
+    <div class = questionMenu id = questionMenu></div>
+</div>
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyC9sES7VySGjivzrsMD3AOmoHtLBimtuxQ",
+    authDomain: "seph-efd35.firebaseapp.com",
+    databaseURL: "https://seph-efd35.firebaseio.com",
+    projectId: "seph-efd35",
+    storageBucket: "seph-efd35.appspot.com",
+    messagingSenderId: "1044605758035",
+    appId: "1:1044605758035:web:3c5a4561c4ba3bcaea34a6",
+    measurementId: "G-CBZ19S069W"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript">
+    jQuery(function($) {
+        var data = [
+            "Core",
+            "Selectors",
+            "Attributes",
+            "Traversing",
+            "Manipulation",
+            "CSS",
+            "Events",
+            "Effects",
+            "Ajax",
+            "Utilities"
+        ];
+    });
+</script>
+<script src = 'sepharia.js'></script>
+  </body>
+
+</html>

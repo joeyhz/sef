@@ -1,0 +1,364 @@
+:root {
+  --main-bg-color:black;
+  --mainBox-bg-color:LightGray;
+  --q-color:#618c91;
+  --button-color:#77c9d4;
+  --selected-q-color:#4f6f73;
+  --title:#77c9d4;
+  --button-text:black;
+  --hover-color:#abc4c7;
+}
+/*
+Original color scheme:
+:root {
+  --main-bg-color:#77c9d4;
+  --mainBox-bg-color:LightGray;
+  --q-color:#e099a0;
+  --button-color:#77c9d4;
+  --selected-q-color:#e0828b;
+  --title:#be2900;
+  --button-text:black;
+}
+*/
+
+h1 {
+  font-size: 40px;
+  color: var(--title);
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+}
+body {
+  background-color: var(--main-bg-color);
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+textarea {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+hr{
+    margin-top: 0px;
+}
+
+i{
+    display: block;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+
+.mainBox{
+    background-color: var(--mainBox-bg-color);
+    border-radius: 24px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width:auto;
+    height: auto;
+    overflow: auto;
+}
+
+.topMenu{
+    display: flex;
+    width: auto;
+}
+
+.topMenu > div{
+    border-right: solid black;
+    width: 13%;
+    padding-right: 6%;
+    padding-left: 6%;
+    cursor: pointer;
+}
+/*
+.topMenu > div:hover{
+    hover-color);
+}*/
+
+.topMenu > div > p{
+    text-align: center;
+}
+
+.topMenu > div:last-child{
+    border-style: none;
+    border-radius: 0px 24px 0px 0px;
+}
+
+.topMenu > div:first-child{
+    border-radius: 24px 0px 0px 0px;
+    background-color: var(--q-color);
+}
+
+#myInput {
+  background-image: url('search_icon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 20%;
+  display:block;
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px;
+  margin-left: 10px;
+}
+
+.questionMenu{
+    background-color: var(--q-color);
+    width: 30%;
+    display:inline-block;
+    margin-bottom: 25px;
+}
+
+.questionMenu > div{
+    padding: 5px 5px 5px 5px;
+    border: 1px solid gray;
+    border-right-color: black;
+    cursor: pointer;
+}
+
+.qAdd{
+    width: 27%;
+    display: none;
+    font-size: 16px; /* Increase font-size */
+    padding: 1% 1% 1% 1%; /* Add some padding */
+    border: 0.1% solid #ddd; /* Add a grey border */
+    margin: 0px 0px 12px 0px;
+}
+
+.addQ{
+    background-color: var(--button-color);
+    border: none;
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    margin: 4px 4px 10px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--button-text);
+}
+
+.addA{
+    background-color: var(--button-color);
+    border: none;
+    padding: 8px 15px 8px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline;
+    font-size: 15px;
+    margin: 10px 40% 20px 40%;
+    width:20%;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--button-text);
+}
+
+.addA.lowMarg{
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.citInput{
+    background-color: white;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: grey;
+    border-width: thin;
+    text-align: left;
+    padding: 5px 5px;
+    margin-right: 2%;
+    margin-bottom: 3px;
+}
+
+
+.num{
+    background-color: white;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: grey;
+    border-width: thin;
+    text-align: left;
+    padding: 5px 5px;
+    width:13%;
+    margin-right: 2%;
+}
+
+.descInput{
+    background-color: white;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: grey;
+    border-width: thin;
+    padding: 5px 5px;
+    color:black;
+    width:75%;
+    margin-right: 11.5%;
+    margin-left: 11.5%;
+    display: block;
+}
+
+.quoteArea{
+    background-color: white;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: grey;
+    border-width: thin;
+    padding: 5px 5px;
+    color:black;
+    color:black;
+    width:75%;
+    margin-right: 11.5%;
+    margin-left: 11.5%;
+    margin-bottom: 5px;
+    display:block;
+}
+
+#disclaimer{
+    margin-right: 11.5%;
+    margin-left: 11.5%;
+    text-align: center;
+    width:75%;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#quoteSpace{
+    display:none;
+}
+
+.citSpan{
+    float:left;
+}
+
+/*.questionMenu > div:first-child{
+    background-color: var(--selected-q-color);
+}*/
+
+.qSelected{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    width: 60%;
+    margin-right:5%;
+    margin-left:5%;
+    float:right;
+    margin-bottom: 10px;
+}
+
+
+.aPlace{
+    float:right;
+    width: 70%;
+    margin-bottom: 50px;
+}
+
+.newABox{
+    /*display: none;*/
+    background-color: var(--selected-q-color);
+    border-radius: 12px;
+    border-style: solid;
+    border-color: grey;
+    display: none;
+    text-align: center;
+    margin-right:10%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    float:none;
+    padding: 1% 1%;
+}
+
+.exit{
+    background-color: red;
+    border: solid;
+    border-color: black;
+    padding: 4px 9px 4px 9px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px 20px 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+}
+
+.ansRef{
+    text-emphasis-color: red;
+}
+
+.done{
+    background-color: green;
+    border: solid;
+    border-color: black;
+    padding: 4px 7px 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    margin: 10px 20px 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+}
+
+.aBox{
+    background-color: var(--main-bg-color);
+    border-radius: 12px;
+    border-style: solid;
+    border-color: grey;
+    display: block;
+    text-align: center;
+    margin-right:10%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    float:none;
+    padding: 10px 10px;
+}
+
+.infoBox{
+    background-color: white;
+    border-radius: 6px;
+    border-style: solid;
+    border-color: grey;
+    display: block;
+    text-align: left;
+    margin-right:5%;
+    margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    float:none;
+    padding: 10px 10px;
+}
+
+.topMenu .icon {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .topMenu div:not(:first-child) {display: none;}
+  .topMenu a.icon {
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 30px;
+    color: black;
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topMenu.responsive {position: relative;}
+  .topMenu.responsive .icon {
+    position: absolute;
+    right: 20;
+    top: 0;
+  }
+  .topMenu.responsive div > p{
+    display: block;
+  }
+}
